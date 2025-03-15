@@ -1,0 +1,107 @@
+<section
+  id="experience"
+  class="py-20 px-6 section-transition dark:bg-gray-900 text-gray-900 dark:text-white"
+>
+  <div class="container mx-auto max-w-4xl">
+    <div class="text-center mb-16">
+      <h3
+        class="text-blue-500 font-medium uppercase tracking-wide opacity-0 animate-fade-in"
+      >
+        My Journey
+      </h3>
+      <h2
+        class="text-4xl font-bold text-gray-900 dark:text-white opacity-0 animate-fade-in"
+      >
+        Work Experience
+      </h2>
+      <p
+        class="max-w-2xl mx-auto text-gray-600 dark:text-gray-300 opacity-0 animate-fade-in"
+      >
+        A chronological view of my professional journey, showcasing my growth
+        and experience in the industry.
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Timeline center line -->
+      <div
+        class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700 -translate-x-1/2"
+      ></div>
+
+      <div class="space-y-12">
+        <div
+          *ngFor="let experience of experienceData; let i = index"
+          #timelineItem
+          class="timeline-item relative md:grid md:grid-cols-2 md:gap-8 items-center"
+          [ngStyle]="{ 'animation-delay': i * 0.1 + 's' }"
+        >
+          <!-- Timeline dot -->
+          <div
+            class="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-gray-900"
+          ></div>
+
+          <!-- Mobile Date (left side) -->
+          <div
+            class="md:hidden flex items-center space-x-2 mb-2 text-blue-600 font-medium"
+          >
+            <i class="far fa-calendar-alt"></i>
+            <span>{{ experience.duration }}</span>
+          </div>
+
+          <!-- Experience Card -->
+          <div
+            class="timeline-card p-6 bg-white dark:bg-gray-900 shadow-lg rounded-lg border border-gray-300 dark:border-gray-700 
+                        {{
+              i % 2 === 0 ? 'md:text-right md:col-start-1' : 'md:col-start-2'
+            }}"
+          >
+            <div class="flex items-center space-x-3 mb-2">
+              <img
+                [src]="experience.logo"
+                [alt]="experience.company"
+                class="w-12 h-12 rounded-full object-cover border-2 border-white dark:border-gray-900"
+              />
+              <div>
+                <h3 class="font-semibold text-gray-900 dark:text-white">
+                  {{ experience.position }}
+                </h3>
+                <p class="text-sm text-blue-600">{{ experience.company }}</p>
+              </div>
+            </div>
+
+            <!-- Desktop Date -->
+            <div
+              class="hidden md:flex items-center {{
+                i % 2 === 0 ? 'justify-end' : 'justify-start'
+              }} space-x-2 mb-2 text-blue-600 font-medium"
+            >
+              <i class="far fa-calendar-alt"></i>
+              <span>{{ experience.duration }}</span>
+            </div>
+
+            <!-- Location -->
+            <div
+              class="flex items-center {{
+                i % 2 === 0 ? 'md:justify-end' : 'md:justify-start'
+              }} space-x-2 mb-4 text-gray-600 dark:text-gray-300 text-sm"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              <span>{{ experience.location }}</span>
+            </div>
+
+            <p class="text-gray-700 dark:text-gray-300">
+              {{ experience.description }}
+            </p>
+          </div>
+
+          <!-- Spacer for Layout Balance -->
+          <div
+            class="hidden md:block {{
+              i % 2 === 0 ? 'md:col-start-2' : 'md:col-start-1'
+            }}"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

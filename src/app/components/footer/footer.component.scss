@@ -1,0 +1,15 @@
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+i {
+  transition: transform 0.3s ease-in-out;
+}
+
+i:hover {
+  transform: scale(1.2);
+}

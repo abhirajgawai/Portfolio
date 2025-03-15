@@ -1,0 +1,107 @@
+<section
+  id="home"
+  class="flex items-center pt-40 pb-20 px-6 section-transition dark:bg-gray-900 text-gray-900 dark:text-white"
+>
+  <div class="container mx-auto max-w-5xl">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+      <!-- Left Side: Text Content -->
+      <div class="md:col-span-3 space-y-8">
+        <div class="space-y-2">
+          <p
+            class="text-blue-500 font-medium tracking-wide opacity-0 animate-fade-in"
+          >
+            Hello, I'm
+          </p>
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0 animate-fade-in"
+          >
+            Abhiraj Gavai
+          </h1>
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-300 opacity-0 animate-fade-in"
+          >
+            Full Stack Developer
+          </h2>
+        </div>
+
+        <p
+          class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl opacity-0 animate-fade-in"
+        >
+          I craft responsive applications where technology meets creativity.
+          Passionate about building scalable and high-performance software
+          solutions.
+        </p>
+
+        <div class="flex flex-wrap gap-4 opacity-0 animate-fade-in">
+          <button
+            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 flex items-center space-x-2"
+            (click)="handleEmailClick()"
+          >
+            📧 Contact Me
+          </button>
+          <a
+            href="#projects"
+            class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
+          >
+            View My Work
+          </a>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex space-x-4 opacity-0 animate-fade-in">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition duration-200"
+          >
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition duration-200"
+          >
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition duration-200"
+          >
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Side: Animated Profile Image -->
+      <div
+        class="md:col-span-2 flex justify-center opacity-0 animate-fade-in-right"
+      >
+        <div class="relative w-64 h-64 md:w-80 md:h-80">
+          <div
+            class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-300/20 to-blue-600/60 animate-pulse-subtle"
+          ></div>
+          <div
+            class="absolute top-0 left-0 w-full h-full rounded-full bg-blue-500/10 backdrop-blur-md animate-spin-slow"
+          ></div>
+          <div
+            class="absolute inset-4 rounded-full bg-white/90 dark:bg-gray-900 flex items-center justify-center overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-tr from-blue-400/20 via-blue-300/10 to-transparent opacity-30"
+            ></div>
+            <!-- Placeholder for Profile Image -->
+            <div
+              class="w-40 h-40 rounded-full bg-blue-200 flex items-center justify-center text-4xl font-bold text-blue-600"
+            >
+              AG
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

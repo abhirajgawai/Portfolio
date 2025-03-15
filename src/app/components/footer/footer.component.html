@@ -1,0 +1,78 @@
+<footer
+  id="contact"
+  class="bg-gray-100 dark:bg-gray-900 py-16 px-6 text-gray-900 dark:text-white"
+>
+  <div class="container mx-auto max-w-6xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+      <!-- Contact Section -->
+      <div class="space-y-6">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+          Get In Touch
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 max-w-md">
+          I'm currently available for freelance work or full-time positions. If
+          you have a project that needs some creative direction, I'd love to
+          hear about it.
+        </p>
+        <button
+          class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 flex items-center space-x-2"
+          (click)="handleEmailClick()"
+        >
+          📧 Contact Me
+        </button>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="space-y-6">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+          Follow Me
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Stay connected with me on social media for updates on my latest
+          projects and tech insights.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition duration-200"
+          >
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition duration-200"
+          >
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition duration-200"
+          >
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div
+      class="border-t border-gray-300 dark:border-gray-700 pt-8 flex flex-col md:flex-row md:justify-between items-center"
+    >
+      <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 md:mb-0">
+        © {{ currentYear }} Abhiraj Gavai. All rights reserved.
+      </p>
+      <p class="text-gray-600 dark:text-gray-300 text-sm flex items-center">
+        Made with ❤️ using Angular & Tailwind CSS
+      </p>
+    </div>
+  </div>
+</footer>

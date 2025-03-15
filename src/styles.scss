@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Light Theme */
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* Shared Styles */
+a {
+  @apply text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors;
+}
+
+/* Angular Material Overrides */
+.mat-card {
+  @apply bg-white dark:bg-gray-800;
+}
+
+.mat-button,
+.mat-raised-button {
+  @apply transition-all duration-300;
+}
+
+/* Smooth Theme Transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}

@@ -1,0 +1,128 @@
+<header
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300 dark:bg-gray-900 text-gray-900 dark:text-white"
+  [ngClass]="{
+    'py-3 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-sm': scrolled,
+    'py-5 bg-transparent': !scrolled
+  }"
+>
+  <div class="container mx-auto px-6 flex justify-between items-center">
+    <!-- Logo -->
+    <a
+      href="/"
+      class="flex items-center space-x-2 logo-animate"
+      aria-label="Home"
+    >
+      <div
+        class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xl"
+      >
+        AG
+      </div>
+      <span class="font-medium text-lg hidden sm:inline-block">Portfolio</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-6">
+      <a
+        href="#home"
+        class="text-gray-800 dark:text-gray-200 hover:text-blue-500 transition duration-200"
+        >Home</a
+      >
+      <a
+        href="#projects"
+        class="text-gray-800 dark:text-gray-200 hover:text-blue-500 transition duration-200"
+        >Projects</a
+      >
+      <a
+        href="#experience"
+        class="text-gray-800 dark:text-gray-200 hover:text-blue-500 transition duration-200"
+        >Experience</a
+      >
+      <a
+        href="#contact"
+        class="text-gray-800 dark:text-gray-200 hover:text-blue-500 transition duration-200"
+        >Contact</a
+      >
+      <button
+        (click)="toggleTheme()"
+        class="px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
+      >
+        🌓
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation Toggle -->
+    <div class="flex items-center space-x-4 md:hidden">
+      <button
+        (click)="toggleTheme()"
+        class="px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
+      >
+        🌓
+      </button>
+      <button (click)="toggleMenu()" class="text-gray-800 dark:text-gray-200">
+        <svg
+          *ngIf="!isMenuOpen"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+        <svg
+          *ngIf="isMenuOpen"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    *ngIf="isMenuOpen"
+    class="fixed inset-0 top-[60px] bg-white dark:bg-gray-900 z-40 md:hidden animate-fade-in"
+  >
+    <nav class="flex flex-col items-center justify-center h-full space-y-8">
+      <a
+        href="#home"
+        class="text-gray-800 dark:text-gray-200 text-xl"
+        (click)="toggleMenu()"
+        >Home</a
+      >
+      <a
+        href="#projects"
+        class="text-gray-800 dark:text-gray-200 text-xl"
+        (click)="toggleMenu()"
+        >Projects</a
+      >
+      <a
+        href="#experience"
+        class="text-gray-800 dark:text-gray-200 text-xl"
+        (click)="toggleMenu()"
+        >Experience</a
+      >
+      <a
+        href="#contact"
+        class="text-gray-800 dark:text-gray-200 text-xl"
+        (click)="toggleMenu()"
+        >Contact</a
+      >
+    </nav>
+  </div>
+</header>
